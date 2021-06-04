@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="com.gjw"/>
+    <!--    <bean id="afterLog" class="com.gjw.log.AfterLog"></bean>-->
+    <!--    <bean id="beforeLog" class="com.gjw.log.BeforeLog"></bean>-->
+<!--        <bean id="userServiceImpl" class="com.gjw.service.impl.UserServiceImpl"></bean>-->
+
+    <!--    <aop:config>-->
+    <!--        <aop:pointcut id="pointCut" expression="execution(* com.gjw.service.impl.UserServiceImpl.*(..))"/>-->
+    <!--        <aop:advisor advice-ref="afterLog" pointcut-ref="pointCut"></aop:advisor>-->
+    <!--        <aop:advisor advice-ref="beforeLog" pointcut-ref="pointCut"></aop:advisor>-->
+
+    <!--    </aop:config>-->
+
+    <!--    <bean id="diyPoint" class="com.gjw.diy.DiyPoint"></bean>-->
+    <!--    <aop:config>-->
+    <!--        <aop:aspect ref="diyPoint">-->
+    <!--            <aop:pointcut id="pointCut" expression="execution(* com.gjw.service.impl.UserServiceImpl.*(..))"/>-->
+    <!--            <aop:after method="after" pointcut-ref="pointCut"></aop:after>-->
+    <!--            <aop:before method="before" pointcut-ref="pointCut"></aop:before>-->
+    <!--        </aop:aspect>-->
+    <!--    </aop:config>-->
+
+    <!--    <bean id="annotationPointCut" class="com.gjw.diy.AnnotationPointCut"/>-->
+
+    <!--    <bean id="systemLogAspect" class="com.gjw.diy.SystemLogAspect"/>-->
+    <!--    <bean id="userController" class="com.gjw.diy.UserController"/>-->
+<!--    <bean id="annotationPointCut" class="com.gjw.diy.AnnotationPointCut"/>-->
+<!--    -->
+    <aop:aspectj-autoproxy/>
+
+</beans>
